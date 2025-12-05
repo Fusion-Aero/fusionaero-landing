@@ -1,54 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fusion Aero</title>
-<style>
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #f8f9fa;
-    color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  .container {
-    text-align: center;
-    padding: 20px;
-  }
-  h1 {
-    font-weight: 600;
-    letter-spacing: -0.5px;
-  }
-  .tagline {
-    margin-top: 10px;
-    font-size: 1.2rem;
-    color: #555;
-  }
-  .contact {
-    margin-top: 25px;
-  }
-  a {
-    color: #0066cc;
-    text-decoration: none;
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fusion Aero</title>
+  <style>
+    :root {
+      --bg-overlay: rgba(0, 0, 0, 0.55);
+      --card-bg: rgba(0, 0, 0, 0.65);
+      --accent: #5ec4ff;
+      --text-main: #f8f9fa;
+      --text-muted: #c4c7cc;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Helvetica, Arial, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-main);
+      background:
+        linear-gradient(var(--bg-overlay), var(--bg-overlay)),
+        url("runway.jpg") center center / cover no-repeat fixed;
+    }
+
+    .container {
+      text-align: center;
+      padding: 32px 28px;
+      border-radius: 18px;
+      background: var(--card-bg);
+      backdrop-filter: blur(8px);
+      max-width: 520px;
+      width: 90%;
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.55);
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .logo-text {
+      font-size: 1.6rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: var(--text-main);
+      white-space: nowrap;
+    }
+
+    .logo-icon {
+      width: 34px;
+      height: 34px;
+      fill: var(--accent);
+    }
+
+    .tagline {
+      margin-top: 6px;
+      font-size: 1.05rem;
+      color: var(--text-muted);
+    }
+
+    .contact {
+      margin-top: 24px;
+      font-size: 0.98rem;
+    }
+
+    .contact a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      padding-bottom: 1px;
+    }
+
+    .contact a:hover {
+      border-color: var(--accent);
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 22px 18px;
+      }
+
+      .logo-text {
+        font-size: 1.3rem;
+        letter-spacing: 0.14em;
+      }
+
+      .tagline {
+        font-size: 0.98rem;
+      }
+    }
+  </style>
 </head>
 <body>
+  <div class="container">
+    <div class="logo">
+      <!-- Simple stylised airplane SVG -->
+      <svg class="logo-icon" viewBox="0 0 64 64" aria-hidden="true">
+        <path d="M4 34l20.5-6.5L22 10.5c-.3-1.8 1.8-2.9 3.1-1.6l9.7 9.8L46 16c1.4-.5 2.7.7 2.3 2.1L45 30l11.1 11.1c.9.9.5 2.5-.7 2.9L48 46l-7.7 10.2c-.9 1.2-2.8.7-3.1-.8L34 41.5 17 44.5c-1.2.2-2.3-.7-2.4-1.9L14 38l-8.5-2.9C3.4 34.9 3.4 34.2 4 34z"/>
+      </svg>
+      <span class="logo-text">FUSION AERO</span>
+    </div>
 
-<div class="container">
-  <h1>Fusion Aero</h1>
-  <div class="tagline">Exploring next-generation aviation systems.</div>
+    <div class="tagline">
+      Exploring next-generation aviation systems and data technology.
+    </div>
 
-  <div class="contact">
-    <p>Contact: <a href="mailto:hello@fusionaero.tech">hello@fusionaero.tech</a></p>
+    <div class="contact">
+      Contact: <a href="mailto:hello@fusionaero.tech">hello@fusionaero.tech</a>
+    </div>
   </div>
-</div>
-
 </body>
 </html>
-
